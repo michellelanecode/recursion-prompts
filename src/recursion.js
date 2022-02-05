@@ -188,17 +188,72 @@ var powerOfTwo = function (n) {
 };
 
 // 9. Write a function that reverses a string.
-var reverse = function (string) {};
+var reverse = function (string) {
+  //rules: use recursion, do not use reverse method
+  //how can we reverse a string?
+  // take the last letter of the string from the word and save it
+  // take the new last letter and add it to the saved letter
+  // continue cycle until you reach the end of the letters.
+  // return the word we havemade
+  // simplest case if string.length === 0; return string
 
+  //one solution is to put string.split into an array, then loop through the array taking each letter
+if (string.length <= 1){
+return string;
+}
+ return string[string.length - 1] + reverse(string.slice(0, string.length - 1));
+
+};
+
+reverse("traf");
 // 10. Write a function that determines if a string is a palindrome.
-var palindrome = function (string) {};
+var palindrome = function (string) {
+//what is a palindrome? a word that is the spelled the exact same way when written backwards.
+//rules: return true or false, ignore spaces and capital letters use recursion by calling SELF **no reusing reverse here!*
+//how can we check if a string reversed matches the incoming string...
+// make all letters lowercase
+// if either the first or last letter is a space, remove it then run the function again
+// we can take the first letter from the string and compare it to last letter in the string until there is one letter left
+// if they all match, return true, else return false
+//
+//
+	string = string.toLowerCase();
+
+			if (string.length <= 1){
+				return true;
+		}
+		if (string[0] === " "){
+			return palindrome(string.slice(1));
+		}
+
+	if (string[string.length - 1] === " "){
+			return palindrome(string.slice(0, string.length -1));
+		}
+
+		if (string[0] === string[string.length - 1]){
+			string =	string.slice(0, string.length - 1);
+		return palindrome(string.slice(1))
+		} else {
+			return false;
+		}
+
+};
+
 
 // 11. Write a function that returns the remainder of x divided by y without using the
 // modulo (%) operator.
 // modulo(5,2) // 1
 // modulo(17,5) // 2
 // modulo(22,6) // 4
-var modulo = function (x, y) {};
+var modulo = function (x, y) {
+//rules: do not use complex math, use recursion return remainders only
+
+
+
+
+
+
+	};
 
 // 12. Write a function that multiplies two numbers without using the * operator or
 // Math methods.
