@@ -246,14 +246,18 @@ var palindrome = function (string) {
 // modulo(17,5) // 2
 // modulo(22,6) // 4
 var modulo = function (x, y) {
-//rules: do not use complex math, use recursion return remainders only
-
-
-
-
+//rules: do not use complex math, use recursion return remainders only do not use modulo
+//what does modulo do? it divides two numbers and returns 0 if they divide evenly with no remainder
+// else it returns the remainder.
+// how can we divide two numbers, select the remainder only and then output the remainder?
+//base case: if x == 0 we have to return zero because we cannot divide zero
+//  if y is less than x we cannot divide it return y
+//
 
 
 	};
+
+
 
 // 12. Write a function that multiplies two numbers without using the * operator or
 // Math methods.
